@@ -71,7 +71,7 @@ var app = new Vue({
   el: '#app',
   data: {
     player: new Character('IVAN', 15, 30, 40, 60, 100),
-    monster: new Character('MONSTER', 20, 40, 20, 30, 120),
+    monster: new Character('MONSTER', 20, 40, 5, 20, 120),
     currentCharacter: this.player,
     isFighting: false,
     logs: []

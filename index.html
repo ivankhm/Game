@@ -43,7 +43,7 @@
             <button id="start-game" @click="startNewGame">START NEW GAME</button>
         </div>
     </section>
-    <section class="row log">
+    <section class="row log" v-if="logs.lenght > 0">
         <div class="small-12 columns">
             <ul>
                 <li v-for="log in logs.slice().reverse()" :class="log.turnStyle">

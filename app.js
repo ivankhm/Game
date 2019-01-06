@@ -105,6 +105,13 @@ var app = new Vue({
     monsterTurn() {
       console.log('inside monsterTurn')
       var action = randInterval(1, 100)
+      //kill player if he can
+      if (this.player.currentHealth <= this.monster.minAttack) {
+        action = 1;
+      }
+      if (this.player.currentHealth <= (this.monster.minAttack*2)) {
+        action = 65;
+      }
 
       //heal yourself
       if (this.monster.currentHealth < 50) {
